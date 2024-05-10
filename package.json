@@ -1,0 +1,9 @@
+{
+    "private" : true ,
+
+    "scripts" : {
+        "shopify" : "bash .config/Tasks/Shopify.sh" ,
+        "build" : "bash .config/Tasks/Build.sh" ,
+        "dev" : "bash .config/Tasks/Dev.sh"
+    }
+}
