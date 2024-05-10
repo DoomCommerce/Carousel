@@ -4,7 +4,7 @@ import { watch } from 'node:fs/promises'
 import { join } from 'node:path'
 
 
-const { log } = console
+const { clear , log } = console
 
 
 const local_folder = import.meta.dir
@@ -28,14 +28,19 @@ const watcher = watch(
 
 const debounced = debounce(() => {
 
+    clear()
+
     log(`Rebuilding ..`)
 
     bundle()
+
+    copy()
 
 },200)
 
 
 bundle()
+copy()
 
 
 for await ( const _ of watcher )
@@ -59,6 +64,19 @@ async function bundle (){
         .text()
 
     path = join(asset_folder,'Carousel.js')
+
+    await Bun.write(path,data)
+}
+
+async function copy (){
+
+    log(`Copying`)
+
+    let path = join(source_folder,'Section.liquid')
+
+    let data = await Bun.file(path).text()
+
+    path = join(theme_folder,'sections','Carousel.liquid')
 
     await Bun.write(path,data)
 }
