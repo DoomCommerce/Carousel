@@ -1,0 +1,29 @@
+{
+    "compilerOptions" : {
+
+        "forceConsistentCasingInFileNames" : true ,
+        "allowSyntheticDefaultImports" : true ,
+        "allowImportingTsExtensions" : true ,
+        "downlevelIteration" : true ,
+        "skipLibCheck" : true ,
+        "composite" : true ,
+        "allowJs" : false ,
+        "strict" : true ,
+        "noEmit" : true ,
+
+        "moduleResolution" : "NodeNext" ,
+        "moduleDetection" : "force" ,
+        "module" : "NodeNext" ,
+        "target" : "ESNext" ,
+
+        "lib" : [ "ESNext" ] ,
+
+        "paths" : {
+
+        }
+    },
+
+    "include" : [
+        "**/*.ts"
+    ]
+}

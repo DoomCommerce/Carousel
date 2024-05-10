@@ -1,9 +1,16 @@
 {
-    "private" : true ,
+  "private": true,
+  "type" : "module" ,
 
-    "scripts" : {
-        "shopify" : "bash .config/Tasks/Shopify.sh" ,
-        "build" : "bash .config/Tasks/Build.sh" ,
-        "dev" : "bash .config/Tasks/Dev.sh"
-    }
+  "scripts": {
+    "shopify": "bash .config/Tasks/Shopify.sh",
+    "build": "bash .config/Tasks/Build.sh",
+    "dev": "bash .config/Tasks/Dev.sh"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.1"
+  },
+  "dependencies": {
+    "@std/async": "npm:@jsr/std__async"
+  }
 }

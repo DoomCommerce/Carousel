@@ -1,0 +1,29 @@
+{
+    "compilerOptions" : {
+
+        "forceConsistentCasingInFileNames" : true ,
+        "allowSyntheticDefaultImports" : true ,
+        "allowImportingTsExtensions" : true ,
+        "downlevelIteration" : true ,
+        "skipLibCheck" : true ,
+        "composite" : true ,
+        "allowJs" : false ,
+        "strict" : true ,
+        "noEmit" : true ,
+
+        "moduleResolution" : "Bundler" ,
+        "moduleDetection" : "force" ,
+        "module" : "ESNext" ,
+        "target" : "ES2020" ,
+
+        "lib" : [ "DOM" , "ESNext" ] ,
+
+        "paths" : {
+
+        }
+    },
+
+    "include" : [
+        "**/*.ts"
+    ]
+}
